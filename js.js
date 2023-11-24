@@ -198,7 +198,21 @@ function fi(id) {
       faceup.forEach(element => {
         opens=true
         element.style.transform="rotateY(180deg)"
-        
+
+        element.addEventListener("mouseover", ()=>{
+           
+                element.style.transform="rotateY(0)"
+            
+            
+        })
+
+        element.addEventListener("mouseout", ()=>{
+       
+                element.style.transform="rotateY(180deg)"
+            
+       
+            
+        })
         
       });
 console.log(opens)
@@ -207,6 +221,20 @@ console.log(opens)
       faceup.forEach(element => {
         opens=false
         element.style.transform="rotateY(0)"
+        element.addEventListener("mouseover", ()=>{
+           
+            element.style.transform="rotateY(180deg)"
+        
+        
+    })
+
+    element.addEventListener("mouseout", ()=>{
+   
+            element.style.transform="rotateY(0)"
+        
+   
+        
+    })
       });
       console.log(opens)
     }
